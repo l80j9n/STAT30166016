@@ -1,22 +1,25 @@
 java c
-Research School of Finance, Actuarial Studies and Statistics  
-Test 1 - Practice Paper C 
+Research School of Finance, Actuarial Studies and Statistics 
+Test 1 - Practice Paper B 
 STAT3016/6016 - Introduction to Bayesian Data Analysis 
-Problem 1 [8 marks]The   Poisson-Gamma   distribution   is   sometimes   used   as   the   sampling   model   assumption   for   observed   count   data that   shows   more   dispersion than predicted under   a   Poisson   model. Consider the   data   model  PoissonGamma(a, b) (i = 1, ..., n). The probability density function of the Poisson-Gamma distribution   is
-where   a   > 0   and   b   >   0
-Suppose that the parameters   (a,   b) are assigned the joint non-informative prior   distribution   proportional   to   1/(ab)2   .(a)    [1 mark] Is   the   joint   non-informative   prior   distribution   p(a,   b)   /   1/(ab)2                                                                                                                                                                                                                     a
-proper   or   improper   prior   distribution? Give   a   reason   for   your   answer.
-(b)    [1 mark] Suppose we consider transforming the parameters by taking the natural logarithm of a and   b   respectively. Deﬁne   θ   1    =   loge   a   and   θ2    =   loge   b. Suggest   one   reason   why   such   a   transformation   might   be   of interest.
-(c)    [2   marks]   Derive   the   prior   density   in   terms   of   (θ1   ,   θ2). That   is,   ﬁndp(θ1   ,   θ2).    [Hint: you   will   need to   apply   the   method   of transformations   technique   for   a   bivariate   density   to   derive   the joint   prior   density   of the   transformed   parameters]
-(d)    [2 marks]   Derive the joint posterior   distribution p(θ1   ,   θ2 jy1, ...,   yn) up   to   a   proportionality   constant   (that   is,   ignoring   any   normalising   constant).
-(e)    [1   mark]   The   joint   posterior   density   in   part (d)   is   not   a   standard   density   that   can   be   sampled   directly   from. What   approximation   approach   could   you   use   to   obtain 1000   posterior   draws   of   (θ1   , θ2   )?         (Note,   you   only   need   to   provide   the   name   of   the   approximation   method,   not   describe   how   you   would   implement   it)
-(f)    [1    mark]   Suppose   you   have   generated 1000   posterior   draws   of   (θ1   ,   θ2)   from   the   target   posterior de代 写STAT3016/6016 - Introduction to Bayesian Data Analysis Test 1 - Practice Paper CMatlab
-代做程序编程语言nsity   derived   in   part   (d).   Describe   how you would   use the   simulated   posterior   sample to   obtain   90%   interval   estimates   for   the   parameters   a   and   b.
-Problem 2 [7 marks] In the recent literature, the   Poisson distribution   has   been   used   to   model   COVID-19   death   counts.    Valid   estimation   of   the   death   rate   relies   on   the   availability   of   accurate   data   on   COVID-19   death   counts.    In   some   regions   in   the   world,   the   accuracy   of   reported   COVID-19   death   counts   is   questionable. We   are   going to build a Bayesian model   to   estimate   the   death   rate   parameter   due   to   COVID-19   using   a   Poisson   sampling   model   but   also   allow   for   possible   under-reporting   of death   counts.Let   y1, ...,   yn      be   the   reported   daily   death   counts   for   Region   A   for   n   diferent   days. Let z1   , ...,   zn      be   the   true   (unreported)   death   counts,   the   sampling   model   assumption   is  Pois(λ). (Note, in this question   we   assume   there   is   no   over-reporting   of death   counts, just   under-reporting   so   yi ≤ zi.)
-(a)    [2   marks]   Assume   yi      =   zi         (i   =   1, ...,   n).    So   there   is   no   under-reporting   of   death   counts. Deﬁne   a prior   distribution   for   λ   and   derive   the   posterior   distribution   of   λ   with   your   chosen   prior.    (Note,   you   do   not   need   to   provide   speciﬁc   hyperparameter   values   in   your   chosen   prior   assumption).
-(b)    [3   marks]   Now   we   want   to   adjust   our   model   for   the   possibility   of   under-reporting. The   true   rate   of under-reporting is not known   but   it   is   assumed that   the   reported   death   count   yi    is   at   least   80%   of the   true   death   count   zi    (for   i =   1, ...,   n).    That   is,   the   under-reporting   rate   is   at   most   20%.
-Give   the   posterior   distribution   of   λ   up   to   a   proportionality   constant      (that   is,   ignoring   any   nor-   malising   constant),   under   this   revised   model
-(c)    [2    marks]    Describe   in   words   how   we   could   use   the   posterior   distribution   in    (b)   to    predict   the   unobserved   true   death   counts   zi.
+Problem 1 [10 marks]
+COVID-19 travel restrictions brought migration to Australia to a halt. In turn, hundreds of thousands of temporary migrants (mainly international students and working holiday makers) left Australia to return to their home country. This disruption to migration has led to a shortage of available workers in the hospitality industry (among other industries). Accommodation and food service businesses are unable to find the staff to keep up with the demand for their services.
+Suppose George owns a cafe and needs to find a new kitchen hand to assist with kitchen duties such as washing dishes and food preparation. Let Y denote the number of unsuccessful phone calls he makes before he finds a suitable person who is willing to take on the job. Let θ denote the probability of securing a kitchen hand on each phone call. We assume θ is the same for all phone calls and the outcome of each phone call is independent of any other phone call.
+(a) [1 mark] Write down the likelihood function p(y|θ).
+(b) [2 marks] Let’s assume a Beta(a, b) prior on θ. Setting values for the hyperparameters a and b will depend on which labour market economist you talk to. You gather the opinion of 5 economists. Two of the economists think the labour market is very tight, and would assume a prior mean on θ of 0.05. Two economists are slightly more optimistic and suggest to assume a prior mean on θ of 0.15 to reflect the relaxation of travel restrictions and gra代 写STAT3016/6016 - Introduction to Bayesian Data Analysis Test 1 - Practice Paper BWeb
+代做程序编程语言dual pick up in migration levels. The fifth economist is the most optimistic and believes the labour market is much looser than portrayed in the media, and suggests a prior mean on θ of 0.30.
+Write down a weakly informative prior distribution that incorporates all 3 types of prior opinions.
+(c) [4 marks] On the 16th phone call, (that is, after 15 unsuccessful calls), George finds a person who agrees to take on the job. Derive your posterior distribution p(θ|y). Make sure your final answer is a proper posterior distribution.
+(d) [1 mark] Find the posterior mean of θ.
+(e) [2 marks] A week later, George has to find another kitchen hand. Find the posterior predictive probability that George will need to make more than 16 phone calls to find another kitchen hand.
+Problem 2 [5 marks] 
+The lognormal distribution is a continuous probability distribution of a random variable whose logarithm is normally distributed. That is, if Y is log-normally distributed, then X = ln Y is normally distributed. The lognormal distribution can be used to describe the behaviour of random variables that can only take on positive real values. For example in finance, the lognormal distribution is sometimes used to describe the behaviour of stock prices.
+Let Y ∼ Lognormal(µ, σ2). The likelihood function of Y is
+
+(note E[Y |µ, σ2] ≠ µ and V ar[Y |µ, σ2] ≠ σ2).
+Let’s assume µ is known and data y1, ..., yn are observed. Find a conjugate prior distribution for σ2 and state the resulting posterior distribution p(σ2|µ, y1, ..., yn).
+
+
 
 
 
